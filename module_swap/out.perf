@@ -1,0 +1,87 @@
+ls   74970 68951.970926:          1 cycles:u: 
+	ffffffff997bb280 [unknown] ([unknown])
+	ffffffff997bb313 [unknown] ([unknown])
+	ffffffffc0e7356f [unknown] ([unknown])
+	ffffffffc0e73e97 [unknown] ([unknown])
+	ffffffff997a6a74 [unknown] ([unknown])
+	ffffffff994b9415 [unknown] ([unknown])
+	ffffffff9a42a01d [unknown] ([unknown])
+	ffffffff9a60136b [unknown] ([unknown])
+	    7fc0d410f290 _start+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.970995:          1 cycles:u: 
+	ffffffff9a601340 [unknown] ([unknown])
+	    7fc0d410f290 _start+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971008:          2 cycles:u: 
+	    7fc0d4110034 _dl_start+0x4 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971014:          7 cycles:u: 
+	ffffffff9a60135d [unknown] ([unknown])
+	    7fc0d4110055 _dl_start+0x25 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410f298 _dl_start_user+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971024:         44 cycles:u: 
+	ffffffffc0e72fbe [unknown] ([unknown])
+	ffffffffc0e73e97 [unknown] ([unknown])
+	ffffffff997a6a74 [unknown] ([unknown])
+	ffffffff994b94c5 [unknown] ([unknown])
+	ffffffff9a42a01d [unknown] ([unknown])
+	ffffffff9a60136b [unknown] ([unknown])
+	    7fc0d4110071 _dl_start+0x41 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410f298 _dl_start_user+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971040:        169 cycles:u: 
+	ffffffff9a601340 [unknown] ([unknown])
+	    7fc0d4110071 _dl_start+0x41 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410f298 _dl_start_user+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971048:        490 cycles:u: 
+	ffffffff9a601344 [unknown] ([unknown])
+	    7fc0d4110340 _dl_start+0x310 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410f298 _dl_start_user+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971059:       2228 cycles:u: 
+	    7fc0d4110343 _dl_start+0x313 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410f298 _dl_start_user+0x0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971066:       8303 cycles:u: 
+	ffffffff994b933d [unknown] ([unknown])
+	ffffffff9a42a01d [unknown] ([unknown])
+	ffffffff9a60136b [unknown] ([unknown])
+	    7fc0d410e512 _dl_sysdep_start+0xd2 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971080:      42472 cycles:u: 
+	    7fc0d4106a75 __GI___tunables_init+0x105 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7ffc1e397fce [unknown] ([unknown])
+	52455000746f6f72 [unknown] ([unknown])
+
+ls   74970 68951.971098:     137107 cycles:u: 
+	    7fc0d410bf94 _dl_next_ld_env_entry+0x4 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410e83c _dl_sysdep_start+0x3fc (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+
+ls   74970 68951.971419:     355128 cycles:u: 
+	    7fc0d40f2b59 _dl_map_object_deps+0x319 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d41123a0 dl_main+0x1ac0 (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d410e83c _dl_sysdep_start+0x3fc (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	              40 [unknown] ([unknown])
+
+ls   74970 68951.971592:     345341 cycles:u: 
+	    7fc0d40fb12d _dl_lookup_symbol_x+0x5d (/usr/lib/x86_64-linux-gnu/ld-linux-x86-64.so.2)
+	    7fc0d40bac28 [unknown] ([unknown])
+	               0 [unknown] ([unknown])
+
+ls   74970 68951.971908:     364616 cycles:u: 
+	ffffffff99839de0 [unknown] ([unknown])
+	ffffffff997d27fe [unknown] ([unknown])
+	ffffffffc0e7a9d3 [unknown] ([unknown])
+	ffffffffc0e7137e [unknown] ([unknown])
+	ffffffffc0e71498 [unknown] ([unknown])
+	ffffffffc0e73be3 [unknown] ([unknown])
+	ffffffffc0e73e97 [unknown] ([unknown])
+	ffffffff997a6a74 [unknown] ([unknown])
+	ffffffff994b9415 [unknown] ([unknown])
+	ffffffff9a42a01d [unknown] ([unknown])
+	ffffffff9a60136b [unknown] ([unknown])
+	    7fc0d3ea48b0 _int_malloc+0xf00 (/usr/lib/x86_64-linux-gnu/libc.so.6)
+

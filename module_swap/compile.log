@@ -1,0 +1,19 @@
+make -C /lib/modules/6.6.8-swapon-profile/build M=/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap modules
+make[1]: Entering directory '/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/linux-6.6.8'
+  MODPOST /home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/Module.symvers
+ERROR: modpost: "pmd_migration_entry_wait" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "hugepage_vma_check" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "folio_add_lru_vma" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "do_swap_page" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "mm_trace_rss_stat" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "filemap_remove_folio" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "__mmu_notifier_invalidate_range_start" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "numa_migrate_prep" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "vm_normal_page" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+ERROR: modpost: "huge_pud_set_accessed" [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/swap.ko] undefined!
+WARNING: modpost: suppressed 30 unresolved symbol warnings because there were too many)
+make[3]: *** [scripts/Makefile.modpost:145: /home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/profiling_swap/Module.symvers] Error 1
+make[2]: *** [/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/linux-6.6.8/Makefile:1865: modpost] Error 2
+make[1]: *** [Makefile:234: __sub-make] Error 2
+make[1]: Leaving directory '/home/syslab/workspace_cmh/swap_test/pxt4-6.6.8-vanilla/linux-6.6.8'
+make: *** [Makefile:12: default] Error 2

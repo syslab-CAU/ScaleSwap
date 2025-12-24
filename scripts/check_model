@@ -1,0 +1,4 @@
+for i in $(seq 0 20)
+do
+	echo "/dev/nvme${i} " `sudo smartctl -a /dev/nvme${i}n1 | grep Model`
+done

@@ -1,0 +1,11 @@
+#!/bin/bash
+echo "Running commands as a root user..."
+dir='/mnt/test/'
+for i in {1..20}
+do
+	sudo fallocate -l 163GB "$dir"swapfile"$i"
+       	sudo chmod 600 "$dir"swapfile"$i"
+	sudo mkswap "$dir"swapfile"$i"
+	sudo swapon -p 1 "$dir"swapfile"$i"	
+done
+echo "All done."

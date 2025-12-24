@@ -1,0 +1,8 @@
+#!/bin/bash
+echo "Running commands as a root user..."
+dir='/mnt/test/'
+sudo fallocate -l 3260G /mnt/test/swapfile
+sudo chmod 600 /mnt/test/swapfile
+sudo mkswap /mnt/test/swapfile
+sudo swapon /mnt/test/swapfile
+echo "All done."

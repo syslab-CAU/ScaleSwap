@@ -1,0 +1,5 @@
+taskset -c 0 stress-ng --vm 1 --vm-bytes 40G --vm-keep &
+taskset -c 1 stress-ng --vm 1 --vm-bytes 40G --vm-keep &
+taskset -c 2 stress-ng --vm 1 --vm-bytes 40G --vm-keep &
+taskset -c 3 stress-ng --vm 1 --vm-bytes 40G --vm-keep &
+taskset -c 4 stress-ng --vm 1 --vm-bytes 40G --vm-keep &
