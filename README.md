@@ -173,4 +173,8 @@ $sudo su
 **Setting All Flash Swap Arrays**
 After that, configure the All-Flash Swap Array and enable swap in the same way as ScaleSwap. Then, run the same benchmark scripts to collect results for comparison. (You can use the exact same scripts under <ScaleSwap>/ for both setups.)
 
- 
+
+
+## EXTMEM
+
+## TMO
