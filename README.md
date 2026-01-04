@@ -77,6 +77,7 @@ $ sudo su
 # ./test_with_dstat_stress_no_time_limit.sh
 ```
 **show result**
+
 when the benchmark excuted, a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
@@ -84,29 +85,35 @@ when the benchmark excuted, a CSV file is created under ./dstat/proposed with in
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
 
-
-**image(gray-scale)**
+### image(gray-scale)
+**run benchmark**
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/image_processing
 # ./gray_scale_test_with_dstat.sh 128 (# of cores)
 ```
 
-**image(flip)**
+### image(flip)
+**run benchmark**
+
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/image_processing
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 
-**dns_visualization**
+### dns\_visualization
+**run benchmark**
+
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/dna_visualization
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 
-**bfs**
+### bfs
+**run benchmark**
+
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/gapbs
@@ -115,7 +122,9 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 
-**python list**
+### python list
+**run benchmark**
+
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/python_list
