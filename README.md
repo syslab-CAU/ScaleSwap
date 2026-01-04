@@ -63,7 +63,7 @@ $ sudo su
 ## Run benchmark and show result
 Run the benchmark after Swap on (**Module comile -> Setting All Flash Swap Arrays -> Swap on**)
 
-### Stress
+### 1. Stress
 **run benchmark**
 ```
 $ sudo su
@@ -79,7 +79,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### image(gray-scale)
+### 2. image(gray-scale)
 **run benchmark**
 ```
 $ sudo su
@@ -95,7 +95,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### image(flip)
+### 3. image(flip)
 **run benchmark**
 ```
 $ sudo su
@@ -111,7 +111,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### dns\_visualization
+### 4. dns\_visualization
 **run benchmark**
 ```
 $ sudo su
@@ -127,7 +127,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### bfs
+### 5. bfs
 **run benchmark**
 ```
 $ sudo su
@@ -145,7 +145,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### python list
+### 6. python list
 **run benchmark**
 ```
 $ sudo su
