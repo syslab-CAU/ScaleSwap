@@ -61,7 +61,7 @@ $ sudo su
 ```
 
 ## Run benchmark and show result
-Run the benchmark after Swap on
+Run the benchmark after Swap on (Setting All Flash Swap Arrays -> Swap on)
 
 ### Stress
 **run benchmark**
