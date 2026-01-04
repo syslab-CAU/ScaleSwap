@@ -160,4 +160,15 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
 
-# The part of AE (It will be deleted after AE)
+# For AE (It will be deleted after AE)
+###Proceed with the assumption that the kernel is already compiled
+###Change to 6.6.8 Original linux kernel
+```
+$sudo su
+# vim /etc/default/grub
+(Please remove the annotation of the following line: #GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-scaleswap-original-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e")
+# update-grub
+# reboot
+```
+
+
