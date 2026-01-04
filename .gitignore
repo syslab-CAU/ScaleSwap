@@ -72,5 +72,6 @@ tags.lock
 tags.temp
 
 *.csv
+*.log
 mem_log/
 latency_log/
