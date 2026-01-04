@@ -161,6 +161,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 # For AE (It will be deleted after AE)
+## Orignal kernel
 ### Proceed with the assumption that the kernel is already compiled
 ### Change to 6.6.8 Original linux kernel
 ```
