@@ -61,8 +61,7 @@ $ sudo su
 ```
 
 ## Run benchmark and show result
-### When the test_with_dstat.sh executed below finishes running, a CSV file is created in ./dstat/proposed within the same directory.
-You can check the throughput using the command below.
+**Run the benchmark after swapon**
 ```
 $ sudo su
 # cd dstat
