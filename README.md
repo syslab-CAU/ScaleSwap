@@ -71,8 +71,8 @@ $ sudo su
 # ./test_with_dstat_stress_no_time_limit.sh
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
@@ -87,8 +87,8 @@ $ sudo su
 # ./gray_scale_test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
@@ -103,8 +103,8 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
@@ -119,8 +119,8 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
@@ -137,8 +137,8 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
@@ -153,8 +153,8 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-When the benchmark excuted, 
-a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+(When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
