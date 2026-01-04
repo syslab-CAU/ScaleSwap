@@ -78,7 +78,8 @@ $ sudo su
 ```
 **show result**
 
-when the benchmark excuted, a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
 # cd ./dstat
@@ -91,6 +92,16 @@ when the benchmark excuted, a CSV file is created under ./dstat/proposed with in
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/image_processing
 # ./gray_scale_test_with_dstat.sh 128 (# of cores)
+```
+
+**show result**
+
+When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+
+```
+# cd ./dstat
+# python3 dstat_average.py proposed/<*.csv> -h
 ```
 
 ### image(flip)
@@ -111,6 +122,16 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 
+**show result**
+
+When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+
+```
+# cd ./dstat
+# python3 dstat_average.py proposed/<*.csv> -h
+```
+
 ### bfs
 **run benchmark**
 
@@ -122,6 +143,16 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 
+**show result**
+
+When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+
+```
+# cd ./dstat
+# python3 dstat_average.py proposed/<*.csv> -h
+```
+
 ### python list
 **run benchmark**
 
@@ -130,3 +161,14 @@ $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/python_list
 # ./test_with_dstat.sh 128 (# of cores)
 ```
+
+**show result**
+
+When the benchmark excuted, 
+a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+
+```
+# cd ./dstat
+# python3 dstat_average.py proposed/<*.csv> -h
+```
+
