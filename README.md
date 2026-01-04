@@ -61,12 +61,7 @@ $ sudo su
 ```
 
 ## Run benchmark and show result
-**Run the benchmark after swapon**
-```
-$ sudo su
-# cd dstat
-# python3 dstat proposed/<*.csv> -h
-```
+**Run the benchmark after Swap on**
 
 ### Stress
 **run benchmark**
@@ -78,6 +73,7 @@ $ sudo su
 **show result**
 
 When the benchmark excuted, 
+
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
@@ -96,6 +92,7 @@ $ sudo su
 **show result**
 
 When the benchmark excuted, 
+
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
@@ -124,6 +121,7 @@ $ sudo su
 **show result**
 
 When the benchmark excuted, 
+
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
@@ -145,6 +143,7 @@ $ sudo su
 **show result**
 
 When the benchmark excuted, 
+
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
@@ -164,6 +163,7 @@ $ sudo su
 **show result**
 
 When the benchmark excuted, 
+
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
 
 ```
