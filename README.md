@@ -60,7 +60,7 @@ $ sudo su
 # umount /mnt/test
 ```
 
-## Run benchmark
+## Run benchmark and show result
 ### When the test_with_dstat.sh executed below finishes running, a CSV file is created in ./dstat/proposed within the same directory.
 You can check the throughput using the command below.
 ```
@@ -69,13 +69,21 @@ $ sudo su
 # python3 dstat proposed/<*.csv> -h
 ```
 
-
-**stress**
+### Stress
+**run benchmark**
 ```
 $ sudo su
 # cd <ScaleSwap>/scripts/fast26-tools/stress
 # ./test_with_dstat_stress_no_time_limit.sh
 ```
+**show result**
+when the benchmark excuted, a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.
+
+```
+# cd ./dstat
+# python3 dstat_average.py proposed/<*.csv> -h
+```
+
 
 **image(gray-scale)**
 ```
