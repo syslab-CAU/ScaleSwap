@@ -1713,10 +1713,18 @@ static bool may_enter_fs(struct folio *folio, gfp_t gfp_mask)
 /*
  * shrink_folio_list() returns the number of reclaimed pages
  */
+unsigned int (*conn_shrink_folio_list)(struct list_head *folio_list,
+		struct pglist_data *pgdat, struct scan_control *sc,
+		struct reclaim_stat *stat, bool ignore_references);
+EXPORT_SYMBOL(conn_shrink_folio_list);
+
 static unsigned int shrink_folio_list(struct list_head *folio_list,
 		struct pglist_data *pgdat, struct scan_control *sc,
 		struct reclaim_stat *stat, bool ignore_references)
 {
+	if (conn_shrink_folio_list)
+		return (*conn_shrink_folio_list)(folio_list, pgdat, sc, stat, ignore_references);
+
 	LIST_HEAD(ret_folios);
 	LIST_HEAD(free_folios);
 	LIST_HEAD(demote_folios);

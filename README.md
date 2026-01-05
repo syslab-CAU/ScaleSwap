@@ -35,6 +35,7 @@ $ sudo su
 ```
 $ sudo su
 # mdadm --stop /dev/md127
+# mdadm --stop /dev/md126
 # cd <ScaleSwap>/scripts
 # ./check_model (we only use 8 FireCuda in our server)
 # mdadm --create /dev/md127 --raid-devices=8 --level=0 /dev/nvme{}n1 (fill 8 FireCuda's nvme number in our server). Please don't select Intel's nvme!!!!

@@ -103,6 +103,14 @@ extern void move_to_folios_to_original_lruvec(void);
 
 extern int (*conn_alloc_mem_cgroup_per_node_info)(struct mem_cgroup *memcg, int node);
 
+extern unsigned int (*conn_shrink_folio_list)(struct list_head *folio_list,
+		struct pglist_data *pgdat, struct scan_control *sc,
+		struct reclaim_stat *stat, bool ignore_references);
+extern unsigned int shrink_folio_list(struct list_head *folio_list,
+		struct pglist_data *pgdat, struct scan_control *sc,
+		struct reclaim_stat *stat, bool ignore_references);
+
+
 
 KTDEC(my_si_spin_lock);
 KTDEC(my_lru_spin_lock);
@@ -128,6 +136,7 @@ ASSIGN FUNCTION POINTER
 	free_swap_slot_module = free_swap_slot;
 	handle_mm_fault_module = k_handle_mm_fault;
 	__alloc_pages_module = _k__alloc_pages;
+	conn_shrink_folio_list = &shrink_folio_list;
 	// swap_writepage_module = _k_swap_writepage;
 	//wbt_wait_module = _k_wbt_wait;
 
@@ -215,6 +224,7 @@ static void __exit exit_swap_module(void)
 // swap scheme
 	swapon_module = NULL;
 
+	conn_shrink_folio_list = NULL;
 	free_swap_slot_module = NULL;
 	handle_mm_fault_module = NULL;
 	__alloc_pages_module = NULL;
