@@ -71,7 +71,7 @@ $ sudo su
 # ./test_with_dstat_stress_no_time_limit.sh
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
@@ -87,7 +87,7 @@ $ sudo su
 # ./gray_scale_test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
@@ -103,7 +103,7 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
@@ -119,7 +119,7 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
@@ -137,7 +137,7 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
@@ -153,14 +153,37 @@ $ sudo su
 # ./test_with_dstat.sh 128 (# of cores)
 ```
 **show result**
-(When the benchmark excuted, 
+(When the benchmark finished, 
 a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_1.csv, \*\_2.csv.)
 ```
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
 
-# For AE (It will be deleted after AE)
+### 7. Latency
+**run benchmark**
+```
+$ sudo su
+# cd <ScaleSwap>/scripts/fast26-tools/latency
+# ./test_with_dstat.sh
+```
+**show result**
+(When the benchmark finished, 
+log files are created under ./ with increasing indices, e.g., *_XXX.log, *_YYY.log.)
+```
+# python3 print_latency.py XXX YYY -h
+```
+
+### 8. Memory usage
+**run benchmark**
+```
+$ sudo su
+# cd <ScaleSwap>/scripts/fast26-tools/memory_usage
+# ./print_memory_usage.sh
+```
+Using a tool such as tmux, open an additional pane/window. **While the script is running, run "1. Stress"**. After the stress workload finishes, terminate the script with Ctrl+C; the script will then print the peak memory_usage.
+
+# For AE 
 ## Orignal kernel
 ### Proceed with the assumption that the kernel is already compiled
 ### Change to 6.6.8 Original linux kernel
