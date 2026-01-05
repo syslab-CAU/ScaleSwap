@@ -37,7 +37,7 @@ $ sudo su
 # mdadm --stop /dev/md127
 # cd <ScaleSwap>/scripts
 # ./check_model (we only use 8 FireCuda in our server)
-# mdadm --create /dev/md127 --raid-devices=8 --level=0 /dev/nvme{}n1 (fill 8 FireCuda's nvme number in our server)
+# mdadm --create /dev/md127 --raid-devices=8 --level=0 /dev/nvme{}n1 (fill 8 FireCuda's nvme number in our server). Please don't select Intel's nvme!!!!
 # mkfs -t ext4 -E lazy_itable_init=0,lazy_journal_init=0 -O ^has_journal /dev/md127
 ```
 
