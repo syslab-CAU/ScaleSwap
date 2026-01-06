@@ -62,6 +62,15 @@ $ sudo su
 ```
 
 ## Run benchmark and show result
+**Use ScaleSwap kernel**
+```
+$ sudo su
+# vim /etc/default/grub
+GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-ScaleSwap-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e"
+GRUB_CMDLINE_LINUX="systemd.unified_cgroup_hierarchy=1 cgroup_no_v1=all"
+# update-grub && reboot
+```
+
 Run the benchmark after Swap on (**Module comile -> Setting All Flash Swap Arrays -> Swap on**)
 
 ### 1. Stress (Figure 1, 12, 16), (Table 2)
@@ -200,9 +209,51 @@ After that, configure the All-Flash Swap Array and enable swap in the same way a
 
 
 
-## EXTMEM
+## EXTMEM (Figure 16)
+### Original Swap for Extmem
+**run benchmark**
+```
+$ sudo su
+# vim /etc/default/grub
+GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-5.15.0-Extmem+-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e"
+# update-grub && reboot
+```
+Set **"Setting All Flash Swap Arrays"**
+```
+# mount /dev/md127 /mnt/test
+# fallocate -l 400G /mnt/test/extmem_swapfile
+# chmod 600 /mnt/test/extmem_swapfile
+# mkswap /mnt/test/extmem_swapfile
+# swapon /mnt/test/extmem_swapfile
+# cd /home/syslab/workspace_hwan/Extmem/ExtMem/run-scripts
+# ./run-mmapbench.sh
+```
+**show result**
+When the benchmark is finished, <log file> is created
+```
+# vim <log file>
+```
 
-## TMO
+### ScaleSwap for Extmem
+**run benchmark**
+```
+$ sudo su
+# vim /etc/default/grub
+GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-ScaleSwap-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e"
+# update-grub && reboot
+```
+Set **Module comile -> Setting All Flash Swap Arrays -> Swap on**
+```
+# cd /home/syslab/workspace_hwan/Extmem/ExtMem/run-scripts
+# ./run-mmapbench-scaleswap.sh
+```
+**show result**
+When the benchmark is finished, <log file> is created
+```
+# vim <log file>
+```
+
+## TMO (Figure 15)
 **Please, don't use ScaleSwap kernel. You can use scaleswap-original kernel**
 ```
 $ sudo su
@@ -220,4 +271,9 @@ $ sudo su
 # echo 40 | sudo tee /sys/module/zswap/parameters/max_pool_percent
 # echo zstd | tee /sys/module/zswap/parameters/compressor
 ```
-First, run “8. memory usage”, then run “2. image (grayscale)”, “3. image (flip)”, and “4. dns_visualization” simultaneously.
+**run benchmark**
+First, set **"Setting All Flash Swap Arrays -> Swap on"**
+Second, run **“8. memory usage”**
+Third, run **“2. image (grayscale)”, “3. image (flip)”, and “4. dns_visualization” simultaneously**.
+**show result**
+Fourth, When evaluation finished, **stop "8. memory uage" script**, then you can show the total memory usage
