@@ -200,12 +200,22 @@ Using a tool such as tmux, open an additional pane/window. **While the script is
 ```
 $sudo su
 # vim /etc/default/grub
-(Please remove the annotation of the following line: #GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-scaleswap-original-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e")
+GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-scaleswap-original-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e"
 # update-grub
 # reboot
 ```
-**Setting All Flash Swap Arrays**
-After that, configure the All-Flash Swap Array and enable swap in the same way as ScaleSwap. Then, run the same benchmark scripts to collect results for comparison. (You can use the exact same scripts under <ScaleSwap>/ for both setups.)
+**Setting All Flash Swap Arrays and mount**
+```
+$ sudo su
+# mdadm --stop /dev/md127
+# mdadm --stop /dev/md126
+# cd <ScaleSwap>/scripts
+# ./check_model (we only use 8 FireCuda in our server)
+# mdadm --create /dev/md127 --raid-devices=8 --level=0 /dev/nvme{}n1 (fill 8 FireCuda's nvme number in our server). Please don't select Intel's nvme!!!!
+# mkfs -t ext4 -E lazy_itable_init=0,lazy_journal_init=0 -O ^has_journal /dev/md127
+# mount /dev/md127 /mnt/test
+```
+### After that, run the same benchmark scripts to collect results for comparison. (You can use the exact same scripts under <ScaleSwap>/ for both setups.)
 
 
 
