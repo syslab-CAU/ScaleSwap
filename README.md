@@ -64,7 +64,7 @@ $ sudo su
 ## Run benchmark and show result
 Run the benchmark after Swap on (**Module comile -> Setting All Flash Swap Arrays -> Swap on**)
 
-### 1. Stress
+### 1. Stress (Figure 1, 12, 16), (Table 2)
 **run benchmark**
 ```
 $ sudo su
@@ -80,7 +80,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### 2. image(gray-scale)
+### 2. image(gray-scale) (Figure 13)
 **run benchmark**
 ```
 $ sudo su
@@ -96,7 +96,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### 3. image(flip)
+### 3. image(flip) (Figure 13)
 **run benchmark**
 ```
 $ sudo su
@@ -112,7 +112,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### 4. dns\_visualization
+### 4. dns\_visualization (Figure 13)
 **run benchmark**
 ```
 $ sudo su
@@ -128,7 +128,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### 5. bfs
+### 5. bfs (Figure 13)
 **run benchmark**
 ```
 $ sudo su
@@ -146,7 +146,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 ```
 
 
-### 6. python list
+### 6. python list (Figure 13)
 **run benchmark**
 ```
 $ sudo su
@@ -161,7 +161,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
 
-### 7. Latency
+### 7. Latency (Table 1)
 **run benchmark**
 ```
 $ sudo su
@@ -175,7 +175,7 @@ log files are created under ./ with increasing indices, e.g., *_XXX.log, *_YYY.l
 # python3 print_latency.py XXX YYY -h
 ```
 
-### 8. Memory usage
+### 8. Memory usage (Figure 15), (Table 3)
 **run benchmark**
 ```
 $ sudo su
@@ -203,3 +203,21 @@ After that, configure the All-Flash Swap Array and enable swap in the same way a
 ## EXTMEM
 
 ## TMO
+**Please, don't use ScaleSwap kernel. You can use scaleswap-original kernel**
+```
+$ sudo su
+# vim /etc/default/grub
+GRUB_DEFAULT="gnulinux-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e>gnulinux-6.6.8-scaleswap-original-advanced-6b7e64a0-90bb-4d86-af47-ec019c73664e"
+GRUB_CMDLINE_LINUX="systemd.unified_cgroup_hierarchy=1 cgroup_no_v1=all"
+# update-grub && reboot
+```
+
+```
+$ sudo su
+# sh -c "echo Y > /sys/module/zswap/parameters/enabled"
+# cat /sys/kernel/debug/zswap/pool_total_size (# 압축된 총 메모리 양 확인)
+
+# echo 40 | sudo tee /sys/module/zswap/parameters/max_pool_percent
+# echo zstd | tee /sys/module/zswap/parameters/compressor
+```
+First, run “8. memory usage”, then run “2. image (grayscale)”, “3. image (flip)”, and “4. dns_visualization” simultaneously.
