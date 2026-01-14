@@ -56,9 +56,9 @@ $ sudo su
 ```
 $ sudo su
 # swapoff -a
+# umount /mnt/test
 # cd <ScaleSwap>/module_swap
 # ./remove_mod.sh
-# umount /mnt/test
 ```
 
 ## Run benchmark and show result
