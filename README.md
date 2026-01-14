@@ -87,7 +87,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
-
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 2. image(gray-scale) (Figure 13)
 **run benchmark**
@@ -103,7 +103,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
-
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 3. image(flip) (Figure 13)
 **run benchmark**
@@ -119,7 +119,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
-
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 4. dns\_visualization (Figure 13)
 **run benchmark**
@@ -135,7 +135,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
-
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 5. bfs (Figure 13)
 **run benchmark**
@@ -153,7 +153,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
-
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 6. python list (Figure 13)
 **run benchmark**
@@ -169,6 +169,7 @@ a CSV file is created under ./dstat/proposed with increasing indices, e.g., \*\_
 # cd ./dstat
 # python3 dstat_average.py proposed/<*.csv> -h
 ```
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 7. Latency (Table 1)
 **run benchmark**
@@ -183,6 +184,7 @@ log files are created under ./ with increasing indices, e.g., *_XXX.log, *_YYY.l
 ```
 # python3 print_latency.py XXX YYY -h
 ```
+Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
 ### 8. Memory usage (Figure 15), (Table 3)
 **run benchmark**
