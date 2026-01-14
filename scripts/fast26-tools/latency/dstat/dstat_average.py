@@ -35,7 +35,7 @@ def get_split_element(line):
 
 
 def byte_transform(bytes, bsize=1000):
-    to = ["bytes", "KB", "MB", "GB", "TB", "PB"]
+    to = ["bytes/s", "KB/s", "MB/s", "GB/s", "TB/s", "PB/s"]
     cnt = 0
     while (bytes >= bsize):
         bytes /= bsize
