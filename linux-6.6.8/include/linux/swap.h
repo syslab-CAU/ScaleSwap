@@ -490,7 +490,8 @@ static inline unsigned long long get_nr_swap_pages(unsigned long long over_val, 
 /* Swap 50% full? Release swapcache more aggressively.. */
 static inline bool vm_swap_full(void)
 {
-	return get_nr_swap_pages(-1, false) * 2 < total_swap_pages;
+	return 1;
+	//return get_nr_swap_pages(-1, false) * 2 < total_swap_pages;
 	// return atomic_long_read(&nr_swap_pages) * 2 < total_swap_pages;
 }
 
