@@ -182,7 +182,7 @@ $ sudo su
 (When the benchmark finished, 
 log files are created under ./ with increasing indices, e.g., *_XXX.log, *_YYY.log.)
 ```
-# python3 print_latency.py XXX YYY -h
+# python3 print_latency.py XXX YYY --human-readable
 ```
 Then, the throughput is the sum of the read and write values shown under dsk/md127.
 
